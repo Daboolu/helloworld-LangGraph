@@ -1,1 +1,1 @@
-python -m reproduce.d_cptreplay
+python -m reproduce.d_memory
