@@ -16,6 +16,17 @@ llm_model = ChatOpenAI(
 )
 
 
+def get_llm_model():
+    """Get LLM model instance"""
+    llm = ChatOpenAI(
+        model=os.getenv("LLM_MODEL"),
+        api_key=os.getenv("LLM_API_KEY"),
+        base_url=os.getenv("LLM_BASE_URL"),
+        temperature=0,
+    )
+    return llm
+
+
 def show_flow(agent: CompiledStateGraph, filename: str):
     """Utility to show the flow graph of an agent"""
     img = agent.get_graph().draw_mermaid_png()

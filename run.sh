@@ -1,1 +1,1 @@
-python -m reproduce.d_memory
+python -m reproduce.e_streaming

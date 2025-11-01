@@ -66,6 +66,7 @@ def polish_joke(state: State, config: RunnableConfig, *, store: BaseStore):
 
     # Save the final joke as a new user memory
     user_id = config["configurable"]["user_id"]
+    # Under the same user, different types of content (memories, notes, history, configs) can also be separated.
     namespace = (user_id, "memories")
     memory_id = str(uuid.uuid4())
     store.put(
